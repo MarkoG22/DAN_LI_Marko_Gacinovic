@@ -85,7 +85,12 @@
     <Compile Include="Models\tblPatient.cs">
       <DependentUpon>HospitalModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\tblRequest.cs">
+      <DependentUpon>HospitalModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\DoctorViewModel.cs" />
     <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\PatientViewModel.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\DoctorView.xaml.cs">
       <DependentUpon>DoctorView.xaml</DependentUpon>

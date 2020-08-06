@@ -7,6 +7,7 @@
       <Diagram DiagramId="3952c955c1924b74a04b6b3852a498da" Name="Diagram1">
         <EntityTypeShape EntityType="HospitalModel.tblDoctor" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="HospitalModel.tblPatient" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HospitalModel.tblRequest" Width="1.5" PointX="0.75" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

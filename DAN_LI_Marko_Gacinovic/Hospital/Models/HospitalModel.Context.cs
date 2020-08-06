@@ -27,5 +27,6 @@ namespace Hospital.Models
     
         public virtual DbSet<tblDoctor> tblDoctors { get; set; }
         public virtual DbSet<tblPatient> tblPatients { get; set; }
+        public virtual DbSet<tblRequest> tblRequests { get; set; }
     }
 }

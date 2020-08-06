@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hospital.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,7 @@ namespace Hospital.View
         public PatientView()
         {
             InitializeComponent();
+            this.DataContext = new PatientViewModel(this);
         }
     }
 }
