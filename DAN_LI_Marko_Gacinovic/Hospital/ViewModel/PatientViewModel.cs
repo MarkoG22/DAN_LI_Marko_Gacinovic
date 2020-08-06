@@ -15,6 +15,7 @@ namespace Hospital.ViewModel
     {
         PatientView patientView;
 
+        // properties
         private tblDoctor doctor;
         public tblDoctor Doctor
         {
@@ -43,6 +44,7 @@ namespace Hospital.ViewModel
             set { urgently = value; OnPropertyChanged("Urgently"); }
         }
 
+        // constructor
         public PatientViewModel(PatientView patientViewOpen)
         {
             request = new tblRequest();
@@ -50,6 +52,10 @@ namespace Hospital.ViewModel
             DoctorList = GetAllDoctors();
         }
 
+        /// <summary>
+        /// method for getting all doctors to the list
+        /// </summary>
+        /// <returns></returns>
         private List<tblDoctor> GetAllDoctors()
         {
             try
@@ -68,6 +74,7 @@ namespace Hospital.ViewModel
             }
         }
 
+        // command for the save button
         private ICommand save;
         public ICommand Save
         {

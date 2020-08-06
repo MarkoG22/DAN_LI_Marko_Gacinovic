@@ -39,6 +39,7 @@ namespace Hospital.ViewModel
             }
         }
 
+        // properties
         private List<tblPatient> patientList;
         public List<tblPatient> PatientList
         {
@@ -134,6 +135,12 @@ namespace Hospital.ViewModel
             return true;
         }
 
+        /// <summary>
+        /// method for checking inputs
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         private bool IsPatient(string username, string password)
         {
             try
@@ -152,6 +159,12 @@ namespace Hospital.ViewModel
             }
         }
 
+        /// <summary>
+        /// method for checking inputs
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
         private bool IsDoctor(string username, string password)
         {
             try

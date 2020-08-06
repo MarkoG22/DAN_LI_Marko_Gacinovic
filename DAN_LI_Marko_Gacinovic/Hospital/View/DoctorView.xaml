@@ -5,8 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hospital.View"
         mc:Ignorable="d"
-        Title="DoctorView" Height="450" Width="800">
+        Title="DoctorView" Height="450" Width="650">
     <Grid>
-        
+        <DataGrid Name="DataGridUsers" ItemsSource="{Binding RequestList, UpdateSourceTrigger=PropertyChanged}"
+                      SelectedItem="{Binding Request, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" HeadersVisibility="Column"
+                      AutoGenerateColumns="False"
+                      HorizontalGridLinesBrush="Black" BorderBrush="Black" Foreground="Black"
+                      FontWeight="Bold" Margin="20">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Request ID" Binding="{Binding RequestID}"/>
+                <DataGridTextColumn Header="Date" Binding="{Binding RequestDate, StringFormat=dd/MM/yyyy}"/>
+                <DataGridTextColumn Header="Reason" Binding="{Binding Reason}" Width="200"/>
+                <DataGridTextColumn Header="Company" Binding="{Binding Company}"/>
+                <DataGridTextColumn Header="Urgently" Binding="{Binding Urgently}"/>                
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="btnDeleteRequest" Content="Delete" 
+                                Command="{Binding DataContext.DeleteRequest, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" 
+                                        Margin="4" FontWeight="Bold"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="btnConfirmRequest" Content="Confirm" 
+                                Command="{Binding DataContext.ConfirmRequest, UpdateSourceTrigger=PropertyChanged, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" 
+                                        Margin="4" FontWeight="Bold"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
